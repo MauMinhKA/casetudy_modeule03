@@ -1,0 +1,99 @@
+<div class="container">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class=" w-75 mx-auto">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Tên DV </span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="tenDV"
+             aria-label="" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('tenDV').invalid && createForm.get('tenDV').touched">
+      Tên KHông để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Diện Tích</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="dientich" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('dientich').invalid && createForm.get('dientich').touched">
+      <span *ngIf="createForm.get('dientich').hasError('required')">Diện tích không được để trống</span>
+      <span *ngIf="createForm.get('dientich').hasError('min')">Diện tích không được âm !</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Số Tầng</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="sotang" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('sotang').invalid && createForm.get('sotang').touched">
+      <span *ngIf="createForm.get('sotang').hasError('required')">Số Tầng không được để trống</span>
+      <span *ngIf="createForm.get('sotang').hasError('min')">Số Tầng không được âm !</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Số Người Tối Đa</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="songuoitoida" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('songuoitoida').invalid && createForm.get('songuoitoida').touched">
+      <span *ngIf="createForm.get('songuoitoida').hasError('required')">Số Người Tối Đa không được để trống</span>
+      <span *ngIf="createForm.get('songuoitoida').hasError('min')">Số Người Tối Đa không được âm !</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Chi Phí</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="chiphi" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('chiphi').invalid && createForm.get('chiphi').touched">
+      <span *ngIf="createForm.get('chiphi').hasError('required')">SChi Phí không được để trống</span>
+      <span *ngIf="createForm.get('chiphi').hasError('min')">Chi Phí không được âm !</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Kiểu Thuê</label>
+      </div>
+      <select formControlName="kieuthue" class="custom-select">
+        <option value="Hành Chính">Theo Giờ</option>
+        <option value="Phục vụ">Theo Ngày</option>
+        <option value="Quản lý">Theo Tuần</option>
+        <option value="Quản lý">Theo Tháng</option>
+        <option value="Quản lý">Trọn Gói</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('kieuthue').invalid && createForm.get('kieuthue').touched">
+      Kiểu Thuê không được để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Kiểu Thuê</label>
+      </div>
+      <select formControlName="trangthai" class="custom-select">
+        <option value="Hành Chính">Sẵn Sàng</option>
+        <option value="Phục vụ">Đã Thuê</option>
+        <option value="Quản lý">Đang Sửa Chữa</option>
+        <option value="Quản lý">Khác</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('trangthai').invalid && createForm.get('trangthai').touched">
+      Trạng thái không được để trống
+    </div>
+    <div class="row d-flex justify-content-center">
+      <input [disabled]="createForm.invalid" type="submit" class="btn btn-success" value="Thêm Mới">
+    </div>
+  </form>
+</div>

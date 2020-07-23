@@ -1,0 +1,148 @@
+<div class="container">
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class=" w-75 mx-auto">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Mã NV</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="maNV"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('maNV').invalid && editForm.get('maNV').touched">
+      <span *ngIf="editForm.get('maNV').hasError('required')">Mã nhân viên không được để trống</span>
+      <span *ngIf="editForm.get('maNV').hasError('pattern')">Mã nhân viên không đúng định dạng !</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Họ Tên </span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="ten" aria-label="Username"
+             aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('ten').invalid && editForm.get('ten').touched">
+      Tên nhân viên không được để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Ngày Sinh</span>
+      </div>
+      <mat-form-field class="form-control">
+        <input [max]="maxdays" formControlName="ngaysinh" matInput [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Địa chỉ</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="diachi" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('ten').invalid && editForm.get('diachi').touched">
+      Địa Chỉ không được để trống
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">CMND</span>
+      </div>
+      <input type="number" ngModel class="form-control" formControlName="cmnd" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('cmnd').invalid && editForm.get('cmnd').touched">
+      <span *ngIf="editForm.get('cmnd').hasError('required')">CMND không được để trống</span>
+      <span *ngIf="editForm.get('cmnd').hasError('pattern')">CMND 9 hoặc 12 số !</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Số DT</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="sodt"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('sodt').invalid && editForm.get('sodt').touched">
+      <span *ngIf="editForm.get('sodt').hasError('required')">Số Điện Thoại không được để trống</span>
+      <span *ngIf="editForm.get('sodt').hasError('pattern')">Số Điện Thoại 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx !</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Email</span>
+      </div>
+      <input type="email" ngModel class="form-control" formControlName="email"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('email').invalid && editForm.get('email').touched">
+      <span *ngIf="editForm.get('email').hasError('required')">Email không được để trống</span>
+      <span *ngIf="editForm.get('email').hasError('pattern')">Email không đúng định dạng !</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Lương</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="luong"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('luong').invalid && editForm.get('luong').touched">
+      <span *ngIf="editForm.get('luong').hasError('required')">Lương không được để trống</span>
+      <span *ngIf="editForm.get('luong').hasError('min')">Lương không được âm !</span>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Trình Độ</label>
+      </div>
+      <select formControlName="trinhdo" class="custom-select">
+        <option value="Trung Cấp">Trung Cấp</option>
+        <option value="Cao Đẳng">Cao Đẳng</option>
+        <option value="Đại Học">Đại Học</option>
+        <option value="Sau Đại Học">Sau Đại Học</option>
+      </select>
+    </div>
+
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('trinhdo').invalid && editForm.get('trinhdo').touched">
+      Trình Độ không được để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Vị Trí</label>
+      </div>
+      <select formControlName="vitri" class="custom-select">
+        <option value="Lễ tân">Lễ tân</option>
+        -->
+        <option value="Phục vụ">Phục vụ</option>
+        <option value="Chuyên viên">Chuyên viên</option>
+        <option value="Giám sát">Giám sát</option>
+        <option value="Quản lý">Quản lý</option>
+        <option value="Giám đốc">Giám đốc</option>
+      </select>
+    </div>
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Bộ phận</label>
+      </div>
+      <select  formControlName="bophan" class="custom-select">
+        <option  value="Hành Chính">Hành Chính</option>
+        <option value="Phục vụ">Phục vụ</option>
+        <option value="Quản lý">Quản lý</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="editForm.get('bophan').invalid && editForm.get('bophan').touched">
+      Bộ phận không được để trống
+    </div>
+    <div class="row d-flex justify-content-center">
+      <input [disabled]="editForm.invalid" type="submit" class="btn btn-success" value="Cập Nhật">
+    </div>
+  </form>
+</div>

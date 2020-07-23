@@ -1,0 +1,126 @@
+
+<div class="container">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class=" w-75 mx-auto">
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Mã NV</label>
+      </div>
+      <select formControlName="maNV" class="custom-select">
+        <option value="NV-1304">NV-1304</option>
+        <option value="NV-2346">NV-2346</option>
+        <option value="NV-1536">NV-1536</option>
+        <option value="NV-2361">NV-2361</option>
+        <option value="NV-2658">NV-2658</option>
+        <option value="NV-3636">NV-3636</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('maNV').invalid && createForm.get('maNV').touched">
+      Mã NV không được để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Mã KH</label>
+      </div>
+      <select formControlName="maKH" class="custom-select">
+        <option value="NV-1304">NV-1304</option>
+        <option value="KH-2346">KH-2346</option>
+        <option value="KH-1536">KH-1536</option>
+        <option value="KH-2361">KH-2361</option>
+        <option value="KH-2658">KH-2658</option>
+        <option value="KH-3636">KH-3636</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('maKH').invalid && createForm.get('maKH').touched">
+      Mã KH không được để trống
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Mã KH</label>
+      </div>
+      <select formControlName="idDV" class="custom-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('idDV').invalid && createForm.get('idDV').touched">
+      Id dịch vụ không được để trống
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Ngày Kết Thúc</span>
+      </div>
+      <mat-form-field class="form-control">
+        <input placeholder="ex: 04/13/1998" [min]="batdauhd" formControlName="ngaybatdau" matInput
+               [matDatepicker]="myDatepicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('ngaybatdau').invalid && createForm.get('ngaybatdau').touched">
+      Ngày bắt đầu không để trống
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Ngày Kết Thúc</span>
+      </div>
+      <mat-form-field class="form-control">
+        <input placeholder="ex: 04/13/1998"  formControlName="ngayketthuc" matInput
+               [matDatepicker]="myDatepicker12">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker12"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker12></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('ngayketthuc').invalid && createForm.get('ngayketthuc').touched">
+      Ngày kết thúc không để trống
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.hasError('invalidStartDate')">
+      Ngày kết thúc phải lớn hơn ngày bắt đầu
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Tiền đặt cọc </span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="tiencoc"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('tiencoc').invalid && createForm.get('tiencoc').touched">
+      <span *ngIf="createForm.get('tiencoc').hasError('required')">Tiền cọc không được để trống</span>
+      <span *ngIf="createForm.get('tiencoc').hasError('min')">Tiền cọc không được âm !</span>
+    </div>
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Tổng tiền</span>
+      </div>
+      <input type="text" ngModel class="form-control" formControlName="tongtien"
+             aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="createForm.get('tongtien').invalid && createForm.get('tongtien').touched">
+      <span *ngIf="createForm.get('tongtien').hasError('required')">Tổng tiền không được để trống</span>
+      <span *ngIf="createForm.get('tongtien').hasError('min')">Tổng tiền không bé hươn tiền cọc</span>
+    </div>
+
+
+    <div class="row d-flex justify-content-center">
+      <input [disabled]="createForm.invalid" type="submit" class="btn btn-success" value="Thêm Mới">
+    </div>
+  </form>
+</div>

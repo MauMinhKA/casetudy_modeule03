@@ -1,0 +1,212 @@
+{
+  "nhanvien": [
+    {
+      "maNV": "NV-1304",
+      "ten": "Trương Khánh Mậu",
+      "cmnd": 123456789,
+      "luong": 25000,
+      "email": "mauminhka19@gmail.com",
+      "sodt": "0912222222",
+      "diachi": "kỳ anh hà tĩnh",
+      "ngaysinh": "13-04-1998",
+      "trinhdo": "Sau Đại Học",
+      "vitri": "Giám đốc",
+      "bophan": "Quản lý",
+      "id": 1
+    },
+    {
+      "maNV": "NV-0123",
+      "ten": "Nguyễn Văn Thiện",
+      "cmnd": 123456789,
+      "luong": 25000,
+      "email": "thiendaucuc@gmail.com",
+      "sodt": "0911111111",
+      "diachi": "kỳ anh hà tĩnh",
+      "ngaysinh": "2020-07-04",
+      "trinhdo": "Cao Đẳng",
+      "vitri": "Phục vụ",
+      "bophan": "Hành Chính",
+      "id": 2
+    },
+    {
+      "maNV": "NV-1244",
+      "ten": "Chế Công Bách",
+      "cmnd": 123456789,
+      "luong": 25000,
+      "email": "congbach@gmail.com",
+      "sodt": "0911111111",
+      "diachi": "kỳ anh hà tĩnh",
+      "ngaysinh": "2020-07-15",
+      "trinhdo": "Trung Cấp",
+      "vitri": "Phục vụ",
+      "bophan": "Hành Chính",
+      "id": 3
+    },
+    {
+      "maNV": "NV-2346",
+      "ten": "Nguyễn Thành Long",
+      "cmnd": 123456789,
+      "luong": 25000,
+      "email": "longluoi@gmail.com",
+      "sodt": "0911111112",
+      "diachi": "kỳ anh hà tĩnh",
+      "ngaysinh": "2020-07-16",
+      "trinhdo": "Cao Đẳng",
+      "vitri": "Lễ tân",
+      "bophan": "Phục vụ",
+      "id": 4
+    },
+    {
+      "maNV": "NV-6582",
+      "ten": "Nguyễn Văn Toàn",
+      "cmnd": "111222333",
+      "luong": "150000",
+      "email": "toan@gmail.com",
+      "sodt": "0901111111",
+      "diachi": "Huế",
+      "ngaysinh": "2020-07-17",
+      "trinhdo": "Cao Đẳng",
+      "vitri": "Chuyên viên",
+      "bophan": "Phục vụ",
+      "id": 5
+    },
+    {
+      "maNV": "NV-2222",
+      "ten": "Nguyễn Xuân Hùng",
+      "cmnd": 111222333,
+      "luong": "34",
+      "email": "xuanhung@gmail.com",
+      "sodt": "0911111111",
+      "diachi": "Đà Nẵng",
+      "ngaysinh": "2020-06-30",
+      "trinhdo": "Trung Cấp",
+      "vitri": "Lễ tân",
+      "bophan": "Hành Chính",
+      "id": 13
+    },
+    {
+      "maNV": "NV-2902",
+      "ten": "Dương Thảo Vy",
+      "cmnd": 111222333,
+      "luong": "25000",
+      "email": "misa2902@gmail.com",
+      "sodt": "0919999999",
+      "diachi": "HUế",
+      "ngaysinh": "2000-02-29",
+      "trinhdo": "Cao Đẳng",
+      "vitri": "Chuyên viên",
+      "bophan": "Hành Chính",
+      "id": 14
+    },
+    {
+      "maNV": "NV-1542",
+      "ten": "Phan Mạnh Quỳnh",
+      "cmnd": "444555666",
+      "luong": "1",
+      "email": "quynh@gmail.com",
+      "sodt": "0911111111",
+      "diachi": "không biết",
+      "ngaysinh": "1977-07-08",
+      "trinhdo": "Trung Cấp",
+      "vitri": "Lễ tân",
+      "bophan": "Hành Chính",
+      "id": 15
+    }
+  ],
+  "khachhang": [
+    {
+      "id": 3,
+      "maKH": "KH-1304",
+      "tenKH": "Nguyễn Thành Tùng",
+      "loaiKH": "Diamond",
+      "ngaysinhKH": "1996-08-25",
+      "cmndKH": "111222333",
+      "emailKH": "tungsky@gmail.com",
+      "diachiKH": "Thái Bình"
+    },
+    {
+      "id": 2,
+      "maKH": "KH-1404",
+      "tenKH": "Vũ Duy Khánh",
+      "loaiKH": "Diamond",
+      "ngaysinhKH": "1995-09-14",
+      "cmndKH": "111222333",
+      "emailKH": "khanhtatto@gmail.com",
+      "diachiKH": "Hà Nội"
+    },
+    {
+      "id": 1,
+      "maKH": "KH-1524",
+      "tenKH": "Phùng Thanh Độ",
+      "loaiKH": "Diamond",
+      "ngaysinhKH": "1989-06-12",
+      "cmndKH": "111222333",
+      "emailKH": "dotay@gmail.com",
+      "diachiKH": "Cao Bằng"
+    },
+    {
+      "id": 4,
+      "maKH": "KH-1524",
+      "tenKH": "Lâm Đình khoa",
+      "loaiKH": "Diamond",
+      "ngaysinhKH": "1996-08-25",
+      "cmndKH": "111222333",
+      "emailKH": "rambo@gmail.com",
+      "diachiKH": "Cao Lãnh"
+    },
+    {
+      "id": 5,
+      "maKH": "KH-2635",
+      "tenKH": "Phùng Thái Linh",
+      "loaiKH": "Diamond",
+      "ngaysinhKH": "1996-08-25",
+      "cmndKH": "111222333",
+      "emailKH": "nhimMVP@gmail.com",
+      "diachiKH": "Đê La Thành"
+    }
+  ],
+  "dichvu": [
+    {
+      "id": 1,
+      "tenDV": "Villa",
+      "dientich": 350,
+      "sotang": 4,
+      "songuoitoida": 15,
+      "chiphi": 500,
+      "kieuthue": "Theo Ngày",
+      "trangthai": "Sẵn Sàng"
+    },
+    {
+      "tenDV": "villa",
+      "dientich": "35",
+      "sotang": "35",
+      "songuoitoida": "35",
+      "chiphi": "35",
+      "kieuthue": "Phục vụ",
+      "trangthai": "",
+      "id": 2
+    }
+  ],
+  "hopdong": [
+    {
+      "id": 1,
+      "maNV": "NV-1304",
+      "maKH": "KH-1234",
+      "idDV": 1,
+      "ngaybatdau": "2020-08-25",
+      "ngayketthuc": "2020-08-26",
+      "tiencoc": 350,
+      "tongtien": 550
+    },
+    {
+      "maNV": "NV-1536",
+      "maKH": "KH-1536",
+      "idDV": "2",
+      "ngaybatdau": "2020-07-21T17:00:00.000Z",
+      "ngayketthuc": "2020-07-22T17:00:00.000Z",
+      "tiencoc": "35",
+      "tongtien": "35",
+      "id": 2
+    }
+  ]
+}
